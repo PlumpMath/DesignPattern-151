@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Created by tomchen on 16/7/18.
  */
-public class DiskCache {
+    public class DiskCache {
 
     static String cacheDir = "sdcard/cache/";
 
@@ -29,13 +29,7 @@ public class DiskCache {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }finally {
-            if(fileOutputStream != null){
-                try {
-                    fileOutputStream.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+            CloseUtils.closeQuietly(fileOutputStream);
         }
     }
 }
