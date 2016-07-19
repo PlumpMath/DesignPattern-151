@@ -1,5 +1,8 @@
 package com.tomchen.designpattern;
 
+import com.tomchen.designpattern.rent.Mediator;
+import com.tomchen.designpattern.rent.Tenant;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -10,6 +13,8 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+        Tenant tenant = new Tenant(1,10000);
+        Mediator mediator = new Mediator();
+        tenant.rentRoom(mediator);
     }
 }
