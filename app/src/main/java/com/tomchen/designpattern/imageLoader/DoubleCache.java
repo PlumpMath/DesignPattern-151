@@ -5,8 +5,8 @@ import android.graphics.Bitmap;
 /**
  * Created by tomchen on 16/7/18.
  */
-public class DoubleCache {
-    private ImageCache mMemoryCache = new ImageCache();
+public class DoubleCache extends ImageCache{
+    private MemoryCache mMemoryCache = new MemoryCache();
     private DiskCache mDiskCache = new DiskCache();
 
     public Bitmap get(String url){

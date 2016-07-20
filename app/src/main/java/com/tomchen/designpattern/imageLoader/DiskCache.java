@@ -13,7 +13,7 @@ import java.io.OutputStream;
 /**
  * Created by tomchen on 16/7/18.
  */
-    public class DiskCache {
+    public class DiskCache extends ImageCache{
 
     static String cacheDir = "sdcard/cache/";
     private DiskLruCache mDiskLruCache;
